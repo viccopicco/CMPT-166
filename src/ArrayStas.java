@@ -1,10 +1,8 @@
 /**
- * 
  * HW 3: Arrays Part A - ArrayStas
  * 
  * @author Ere Santos <ere.santos@twu.ca>
  * Date: March 2, 2016
- * 
  */
 import java.util.Arrays;
 import java.util.Random;
