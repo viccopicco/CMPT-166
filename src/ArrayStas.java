@@ -3,6 +3,16 @@
  * 
  * @author Ere Santos <ere.santos@twu.ca>
  * Date: March 2, 2016
+ * 
+ * GitHub Path: https://github.com/viccopicco/CMPT-166/blob/master/src/ArrayStas.java
+ * Description: Create an application ArrayStas. This application will:
+ * 					a) 	generate 300 random numbers between 0 and 100.
+ * 					b) 	sort these 300 numbers.
+ * 					c) 	make use of a seperate array to count the simple statistic of how many numbers were between
+ * 						five categories: 1-20, 21-40, 41-50, 61-80, 81-100.
+ * 					d) 	print out:
+ * 						i) 	the sorted array of numbers
+ * 						ii) simple bar graph of the above five categories. 
  */
 import java.util.Arrays;
 import java.util.Random;
