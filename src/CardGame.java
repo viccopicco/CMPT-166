@@ -23,7 +23,7 @@ import java.util.*;
 import java.lang.*;
 public class CardGame{
 	/**
-	 * This method prints out the game board
+	 * This method prints out the game board layout.
 	 */
     public static void boardLYT(){
         int cards[][]=new int[4][4];
@@ -81,24 +81,24 @@ public class CardGame{
         int r2=0,c2=0,tmr=5000;
         do{
             do{
-                System.out.println("Please insert the 1st card:");
+                System.out.println("What's your guess for the first card: ");
                 String rw=new String(keyboard.next());
                 rw0=rw.charAt(0);cl0=rw.charAt(1);
                 r1=Character.digit(rw0,5);c1=Character.digit(cl0,5);
                 if(cs[r1-1][c1-1] == true){
-                    System.out.println("This card is already flipped! Select another card.");
+                    System.out.println("You already flipped the card dude... Choose another one.");
                 }
             }while(cs[r1-1][c1-1]!= false);
             do{
-                System.out.println("Please insert the 2nd card:");
+                System.out.println("What's your guess for the second card: ");
                 String rw11=new String(keyboard.next());
                 rw1=rw11.charAt(0);cl1=rw11.charAt(1);
                 r2=Character.digit(rw1,5);c2=Character.digit(cl1,5);
                 if(cs[r2-1][c2-1] == true){
-                    System.out.println("This card is already flipped! Select another card.");
+                    System.out.println("You already flipped the card dude... Choose another one.");
                 }
                 if((r1==r2)&&(c1==c2)){
-                    System.out.println("This card is already chosen! Select another card.");
+                    System.out.println("You already chose that card dude... Choose another one!");
                 }
             }
             while((cs[r2-1][c2-1]!= false)||((r1==r2)&&(c1==c2)));
@@ -129,7 +129,8 @@ public class CardGame{
             }
             System.out.println();
             if (cards[r1][c1]==cards[r2][c2]){
-                System.out.println("Cards Matched!");
+            	System.out.println("WINNER WINNER CHICKEN DINNER!!!");
+            	System.out.println("We found ourselves a match!!");
  
                 cs[r1][c1] = true;
                 cs[r2][c2] = true;
@@ -172,13 +173,13 @@ public class CardGame{
                 }
             }
         }
-        while(ov != true); // loop, the only way to get out is to finish the game!
+        while(ov != true);
     }
     public static void main(String[] args){
         String playRepeat="";
         Scanner keyboard=new Scanner(System.in);
         System.out.println("Enter the card coordinate for each card when requested");
-        System.out.println("For example you, you should type '11' for the "
+        System.out.println("For example you, you could type '11' for the "
         		+ "first coordinate and '22' for the second coordinate.");
         System.out.println();
         do{
