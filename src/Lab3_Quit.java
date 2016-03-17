@@ -5,7 +5,6 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.BorderLayout;
-import java.awt.GridLayout;
 import java.awt.FlowLayout;
 import java.awt.Color;
 
@@ -13,13 +12,7 @@ import java.awt.Color;
 public class Lab3_Quit extends JFrame implements ActionListener {
 	public static final int WIDTH = 300;
 	public static final int HEIGHT = 200;
-	
-	private JPanel closePanel;
-	
-	public static void main (String[] args){
-		Lab3_Quit gui = new Lab3_Quit();
-		gui.setVisible(true);
-	}
+	static Lab3_Quit gui = new Lab3_Quit();
 	
 	public Lab3_Quit(){
 		super("Close Program");
@@ -52,10 +45,6 @@ public class Lab3_Quit extends JFrame implements ActionListener {
 		
 		if (buttonString.equals("Yes"))
 			System.exit(0);
-		else{
-			Lab3_Quit gui = new Lab3_Quit();
-			gui.setVisible(false);
-		}
 	}
 	
 }
